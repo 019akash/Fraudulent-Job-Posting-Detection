@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Analysis Result</h1>
+        </header>
+
+        <main>
+            <div class="result-box">
+                <h2>Prediction Outcome</h2>
+                {# Conditionally apply class based on prediction #}
+                {% if 'Fraudulent' in prediction_text %}
+                    <p class="prediction-fraud"><strong>Prediction:</strong> {{ prediction_text }}</p>
+                {% elif 'Legitimate' in prediction_text %}
+                    <p class="prediction-legit"><strong>Prediction:</strong> {{ prediction_text }}</p>
+                {% else %}
+                    <p><strong>Prediction:</strong> {{ prediction_text }}</p> {# Fallback for error messages #}
+                {% endif %}
+
+                {% if probability_text %}
+                 <p class="probability-details">{{ probability_text }}</p>
+                {% endif %}
+            </div>
+
+            <a href="/" class="back-link">Analyze Another Posting</a>
+        </main>
+
+         <footer>
+            <p>© 2025 Fraudulent Job Posting Detector. Based on ML Model.</p>
+        </footer>
+    </div>
+</body>
+</html>
