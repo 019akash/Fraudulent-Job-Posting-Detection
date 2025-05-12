@@ -1,0 +1,184 @@
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Lighter gray background */
+    color: #343a40; /* Darker text color */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh; /* Ensure footer is at bottom if content is short */
+    padding-top: 40px; /* Add padding at the top */
+    padding-bottom: 40px;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 800px; /* Wider container */
+    margin: 0 auto; /* Center horizontally */
+    padding: 40px;
+    background: #ffffff; /* White background for content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 8px;
+    border-top: 5px solid #007bff; /* Blue accent border */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dee2e6; /* Light border */
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: #0056b3; /* Darker blue */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+header p {
+    color: #6c757d; /* Medium gray */
+    font-size: 1.1em;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 1px solid #ced4da;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: 600;
+    color: #495057;
+    padding: 0 10px;
+    font-size: 1.1em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block; /* Stack label above input */
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #495057; /* Slightly lighter than main text */
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da; /* Standard border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #80bdff; /* Blue border on focus */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Subtle blue glow */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px; /* Minimum height */
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: block; /* Make it block to center easily */
+    width: auto; /* Auto width based on padding */
+    margin: 20px auto 0 auto; /* Center the button */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+/* Result Page Styling */
+.result-box {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid #e9ecef;
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-box h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.result-box p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Specific styles for prediction text */
+.prediction-fraud {
+    color: #dc3545; /* Red for fraudulent */
+    font-weight: bold;
+}
+
+.prediction-legit {
+    color: #28a745; /* Green for legitimate */
+    font-weight: bold;
+}
+
+.probability-details {
+    color: #6c757d; /* Medium gray for probability */
+    font-size: 1em;
+}
+
+/* Back Link Styling */
+.back-link {
+    display: block; /* Center link */
+    text-align: center;
+    margin-top: 30px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.9em;
+    color: #6c757d;
+}
