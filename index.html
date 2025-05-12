@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Posting Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FraudFinder</h1>
+            <p>Analyze job postings for potential fraudulent activity.</p>
+        </header>
+
+        <main>
+            <form action="/predict" method="post">
+
+                <fieldset>
+                    <legend>Basic Information</legend>
+                    <div class="form-group">
+                        <label for="title">Job Title:</label>
+                        <input type="text" id="title" name="title" placeholder="e.g., Software Engineer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" placeholder="e.g., US, NY, New York or GB, , London">
+                    </div>
+                     <div class="form-group">
+                        <label for="employment_type">Employment Type:</label>
+                        <input type="text" id="employment_type" name="employment_type" placeholder="e.g., Full-time, Part-time, Contract">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Compensation & Department</legend>
+                     <div class="form-group">
+                        <label for="salary_range">Salary Range (Optional):</label>
+                        <input type="text" id="salary_range" name="salary_range" placeholder="e.g., 80000-120000, Leave blank if unknown">
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department (Optional):</label>
+                        <input type="text" id="department" name="department" placeholder="e.g., Engineering, Marketing">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Job Details</legend>
+                    <div class="form-group">
+                        <label for="description">Job Description:</label>
+                        <textarea id="description" name="description" rows="6" placeholder="Enter the full job description..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="requirements">Requirements (Optional):</label>
+                        <textarea id="requirements" name="requirements" rows="4" placeholder="List necessary skills, qualifications..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="benefits">Benefits (Optional):</label>
+                        <textarea id="benefits" name="benefits" rows="4" placeholder="Describe benefits, perks..."></textarea>
+                    </div>
+                </fieldset>
+
+                 <fieldset>
+                    <legend>Qualifications</legend>
+                    <div class="form-group">
+                        <label for="required_experience">Required Experience:</label>
+                        <input type="text" id="required_experience" name="required_experience" placeholder="e.g., Mid-Senior level, Entry level, Not Applicable">
+                    </div>
+                    <div class="form-group">
+                        <label for="required_education">Required Education:</label>
+                        <input type="text" id="required_education" name="required_education" placeholder="e.g., Bachelor's Degree, Master's Degree, Unspecified">
+                    </div>
+                 </fieldset>
+
+                 <fieldset>
+                    <legend>Industry & Function</legend>
+                    <div class="form-group">
+                        <label for="industry">Industry (Optional):</label>
+                        <input type="text" id="industry" name="industry" placeholder="e.g., Information Technology and Services, Financial Services">
+                    </div>
+                    <div class="form-group">
+                        <label for="function">Job Function (Optional):</label>
+                        <input type="text" id="function" name="function" placeholder="e.g., Engineering, Sales, Information Technology">
+                    </div>
+                 </fieldset>
+
+                 <fieldset>
+                     <legend>Company & Application Details</legend>
+                     <div class="form-group">
+                        <label for="company_profile">Company Profile (Optional):</label>
+                        <textarea id="company_profile" name="company_profile" rows="4" placeholder="Describe the company..."></textarea>
+                     </div>
+                     <div class="form-group">
+                        <label for="telecommuting">Allows Telecommuting?</label>
+                        <select id="telecommuting" name="telecommuting">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="has_company_logo">Includes Company Logo?</label>
+                        <select id="has_company_logo" name="has_company_logo">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="has_questions">Includes Screening Questions?</label>
+                        <select id="has_questions" name="has_questions">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                 </fieldset>
+
+                <button type="submit">Analyze Posting</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>© 2025 Fraudulent Job Posting Detector. Based on ML Model.</p>
+        </footer>
+    </div>
+</body>
+</html>
